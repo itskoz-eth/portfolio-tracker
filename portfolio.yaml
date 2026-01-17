@@ -20,10 +20,9 @@ portfolio_name: "My Portfolio"
 # Common IDs: bitcoin, ethereum, solana, dogecoin, cardano, ripple, polkadot,
 #            chainlink, uniswap, aave, avalanche-2, polygon-ecosystem-token
 crypto:
-  bitcoin: 100
-  ethereum: 100
-  aave: 100
-  dogecoin: 100
+  bitcoin: 0.5
+  ethereum: 2.0
+  # solana: 10
   # Add more crypto here...
 
 # -----------------------------------------------------------------------------
@@ -32,10 +31,9 @@ crypto:
 # Format: TICKER: shares
 # Use standard ticker symbols (uppercase)
 stocks:
-  TSLA: 100
-  AMZN: 100
-  VOO: 100
-  ASTS: 100
+  AAPL: 10
+  TSLA: 5
+  VOO: 20
   # Add more stocks/ETFs here...
 
 # -----------------------------------------------------------------------------
@@ -44,5 +42,6 @@ stocks:
 # Format: account_name: dollar_amount
 # These are valued at $1 each
 cash:
-  # Bank Account: 5000
+  Bank Account: 5000
+  USDC: 1000
   # Add more cash positions here...
