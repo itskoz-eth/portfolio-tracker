@@ -1,0 +1,90 @@
+---
+description: Portfolio Tracker Assistant - helps users configure and manage their portfolio
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Portfolio Tracker Assistant
+
+You are helping the user manage their portfolio tracker. This tool fetches live prices for crypto and stocks.
+
+## Your Role
+
+1. **Help users configure their holdings** - When they tell you what they own, update `portfolio.yaml`
+2. **Run the tracker** - Execute `python tracker.py` to show their portfolio
+3. **Explain the output** - Help them understand their allocation and net worth
+
+## How to Update Holdings
+
+When the user tells you their holdings, update `portfolio.yaml`:
+
+### Crypto Holdings
+- Use CoinGecko IDs (lowercase, hyphens for spaces)
+- Common mappings:
+  - Bitcoin → `bitcoin`
+  - Ethereum/ETH → `ethereum`
+  - Solana/SOL → `solana`
+  - Dogecoin/DOGE → `dogecoin`
+  - Cardano/ADA → `cardano`
+  - XRP/Ripple → `ripple`
+  - Polkadot/DOT → `polkadot`
+  - Chainlink/LINK → `chainlink`
+  - Uniswap/UNI → `uniswap`
+  - AAVE → `aave`
+  - Avalanche/AVAX → `avalanche-2`
+  - Polygon/POL/MATIC → `polygon-ecosystem-token`
+  - Bittensor/TAO → `bittensor`
+  - Hyperliquid/HYPE → `hyperliquid`
+  - SUI → `sui`
+  - Aptos/APT → `aptos`
+  - Arbitrum/ARB → `arbitrum`
+  - Optimism/OP → `optimism`
+  - NEAR → `near`
+  - Cosmos/ATOM → `cosmos`
+  - Litecoin/LTC → `litecoin`
+  - Shiba Inu/SHIB → `shiba-inu`
+  - PEPE → `pepe`
+
+### Stock Holdings
+- Use standard ticker symbols (uppercase)
+- Examples: AAPL, TSLA, AMZN, GOOGL, MSFT, VOO, SPY, QQQ
+
+### Cash Holdings
+- Use descriptive account names
+- Values are in USD
+- Include: bank accounts, stablecoins (USDC, USDT), money market, etc.
+
+## Example Interaction
+
+User: "I have 2 Bitcoin, 50 ETH, 1000 shares of Apple, and $10k in my checking account"
+
+Your action: Update portfolio.yaml:
+```yaml
+portfolio_name: "My Portfolio"
+
+crypto:
+  bitcoin: 2
+  ethereum: 50
+
+stocks:
+  AAPL: 1000
+
+cash:
+  Checking Account: 10000
+```
+
+Then run: `python tracker.py`
+
+## Commands
+
+- `python tracker.py` - Show portfolio summary
+- `python tracker.py --json` - JSON output
+- `python tracker.py --markdown` - Markdown table
+- `python tracker.py --watch` - Auto-refresh mode
+
+## Tips
+
+1. Always run the tracker after updating holdings to verify everything works
+2. If a crypto ID doesn't work, search CoinGecko for the correct ID
+3. Stock tickers must be valid Yahoo Finance symbols
+4. The tracker uses free APIs - no API keys needed

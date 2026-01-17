@@ -1,0 +1,48 @@
+# =============================================================================
+# YOUR PORTFOLIO CONFIGURATION
+# =============================================================================
+# Tell the AI assistant your holdings and it will update this file for you.
+# Or edit manually - just update the numbers next to each asset.
+#
+# Crypto: Use the number of coins/tokens you own
+# Stocks: Use the number of shares you own
+# Cash: Use the dollar amount
+# =============================================================================
+
+# Your name (optional, for display)
+portfolio_name: "My Portfolio"
+
+# -----------------------------------------------------------------------------
+# CRYPTO HOLDINGS
+# -----------------------------------------------------------------------------
+# Format: coin_id: amount
+# Use CoinGecko IDs (lowercase, hyphens for spaces)
+# Common IDs: bitcoin, ethereum, solana, dogecoin, cardano, ripple, polkadot,
+#            chainlink, uniswap, aave, avalanche-2, polygon-ecosystem-token
+crypto:
+  bitcoin: 100
+  ethereum: 100
+  aave: 100
+  dogecoin: 100
+  # Add more crypto here...
+
+# -----------------------------------------------------------------------------
+# STOCK & ETF HOLDINGS  
+# -----------------------------------------------------------------------------
+# Format: TICKER: shares
+# Use standard ticker symbols (uppercase)
+stocks:
+  TSLA: 100
+  AMZN: 100
+  VOO: 100
+  ASTS: 100
+  # Add more stocks/ETFs here...
+
+# -----------------------------------------------------------------------------
+# CASH & STABLECOINS
+# -----------------------------------------------------------------------------
+# Format: account_name: dollar_amount
+# These are valued at $1 each
+cash:
+  # Bank Account: 5000
+  # Add more cash positions here...
